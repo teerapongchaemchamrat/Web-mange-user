@@ -362,7 +362,7 @@ export default function Edituser () {
 
         }else {
             setloading(true);
-            await axios.put(`http://192.168.10.114:88/cyf/user/update/${getUserID}`, userData);
+            await axios.put(`http://XXXXXXXXXXXXXXXX/${getUserID}`, userData);
 
             setCurrent(0);
             setloading(false);

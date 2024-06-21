@@ -17,7 +17,7 @@ export default function ComBroken (){
     const GetComBroken = async () => {
         try{
             setLoading(true);
-            const getdata = await axios.get(`http://192.168.10.114:88/cyf/com/broken`);
+            const getdata = await axios.get(`http://XXXXXXXXXXXXXXXX`);
             const res = getdata.data.map(item => ({
                 ...item,
                 case_service: item.case_service || '',

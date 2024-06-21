@@ -31,7 +31,7 @@ export default function Adduser () {
 
   const getListID = async() => {
     try {
-      const getlist = await axios.get('http://192.168.10.114:88/bmc/user/get');
+      const getlist = await axios.get('http://XXXXXXXXXXXXXXXX');
       const response = getlist.data;
 
       if (response.length > 0) {
@@ -334,7 +334,7 @@ export default function Adduser () {
 
         }else {
             setloading(true);
-            await axios.post("http://192.168.10.114:88/bmc/user/add", userData);
+            await axios.post("http://XXXXXXXXXXXXXXXX", userData);
             setEmployeeID('');
             setFirstname('');
             setLastname('');

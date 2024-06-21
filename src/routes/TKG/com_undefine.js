@@ -21,12 +21,22 @@ export default function ComUndefine () {
         const getuser = await axios.get('http://192.168.10.114:88/tkg/com/undefined');
         const userData = getuser.data.map(item => ({
           ...item,
+          user_id: item.user_id || '',
           case_service: item.case_service || '',
+          case_brand: item.case_brand || '',
+          case_model: item.case_model || '',
           moniter_service: item.moniter_service || '',
+          moniter_brand: item.moniter_brand || '',
+          moniter_serial: item.moniter_serial || '',
           key_serial: item.key_serial || '',
+          key_brand : item.key_brand || '',
           mouse_serial: item.mouse_serial || '',
+          mouse_brand: item.mouse_brand || '',
           os: item.os || '',
           office_version: item.office_version || '',
+          office_key: item.office_key || '' ,
+          office_acc: item.office_acc || '',
+          office_pass: item.office_pass || '',
           location: item.location || '',
         }));
         setUser(userData);

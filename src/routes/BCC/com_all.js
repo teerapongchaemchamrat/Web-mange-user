@@ -14,7 +14,7 @@ export default function Allcom () {
   const getData = async () => {
     try{
         setloading(true);
-        const getuser = await axios.get('http://192.168.10.114:88/bcc/com/get');
+        const getuser = await axios.get('http://XXXXXXXXXXXXXXXX');
         const userData = getuser.data.map(item => ({
           ...item,
           case_service: item.case_service || '',

@@ -417,7 +417,7 @@ export default function RepairCom () {
 
         }else {
             setloading(true);
-            await axios.put(`http://192.168.10.114:88/tkg/com/update/${getCaseService}`, comData);
+            await axios.put(`http://XXXXXXXXXXXXXXXX/${getCaseService}`, comData);
 
             setCurrent(0);
             setloading(false);

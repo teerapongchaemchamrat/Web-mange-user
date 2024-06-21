@@ -18,7 +18,7 @@ export default function ComUndefine () {
   const getData = async () => {
     try{
         setloading(true);
-        const getuser = await axios.get('http://192.168.10.114:88/bmc/com/undefined');
+        const getuser = await axios.get('http://XXXXXXXXXXXXXXXX');
         const userData = getuser.data.map(item => ({
           ...item,
           user_id: item.user_id || '',
@@ -166,7 +166,7 @@ export default function ComUndefine () {
     }
     try{
       setloading(true);
-      await axios.put(`http://192.168.10.114:88/cyf/com/remove/${record.case_service}`, Data);
+      await axios.put(`http://XXXXXXXXXXXXXXXX/${record.case_service}`, Data);
 
       getData();
 

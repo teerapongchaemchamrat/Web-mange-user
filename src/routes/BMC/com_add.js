@@ -382,7 +382,7 @@ export default function Addcom () {
 
         }else {
             setloading(true);
-            await axios.post("http://192.168.10.114:88/bmc/com/add", userData);
+            await axios.post("http://XXXXXXXXXXXXXXXX", userData);
             setEmployeeID('');
             setCase_brand('');
             setCase_model('');

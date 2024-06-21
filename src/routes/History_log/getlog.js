@@ -18,7 +18,7 @@ export default function GetLog (){
     const getLog = async (param) => {
         try{
             setLoading(true);
-            const getdata = await axios.get(`http://192.168.10.114:88/cyf/com/log/${param}`);
+            const getdata = await axios.get(`http://XXXXXXXXXXXXXXXX/${param}`);
             const res = getdata.data.map(item => ({
                 ...item,
                 case_service : item.case_service || '',
@@ -58,7 +58,7 @@ export default function GetLog (){
     const getDoc = async (param) => {
       try{
           setLoading(true);
-          const getdata = await axios.get(`http://192.168.10.114:88/cyf/com/doc/${param}`);
+          const getdata = await axios.get(`http://XXXXXXXXXXXXXXXX/${param}`);
           const res = getdata.data.map(item => ({
               ...item,
               case_service : item.case_service || '',

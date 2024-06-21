@@ -15,7 +15,7 @@ export default function Home (){
     const getData = async () => {
         try{
             setloading(true);
-            const getuser = await axios.get('http://192.168.10.114:88/cyf/user/result');
+            const getuser = await axios.get('http://XXXXXXXXXXXXXXXX');
             const userData = getuser.data.map(item => ({
               ...item,
               first_name : item.first_name || '',

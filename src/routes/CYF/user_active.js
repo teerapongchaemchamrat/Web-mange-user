@@ -26,7 +26,7 @@ export default function ManageUser () {
   const getData = async () => {
     try{
         setloading(true);
-        const getuser = await axios.get('http://192.168.10.114:88/cyf/user/active');
+        const getuser = await axios.get('http://XXXXXXXXXXXXXXXX');
         const userData = getuser.data.map(item => ({
           ...item,
           first_name: item.first_name || '',
@@ -158,7 +158,7 @@ export default function ManageUser () {
     }
     try{
       setloading(true);
-      await axios.put(`http://192.168.10.114:88/cyf/user/remove/${record.user_id}`, Data);
+      await axios.put(`http://XXXXXXXXXXXXXXXX/${record.user_id}`, Data);
 
       getData();
 

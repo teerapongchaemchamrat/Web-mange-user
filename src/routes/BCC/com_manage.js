@@ -49,7 +49,7 @@ export default function ManageCom () {
   const getData = async () => {
     try{
         setloading(true);
-        const getuser = await axios.get('http://192.168.10.114:88/bcc/com/get');
+        const getuser = await axios.get('http://XXXXXXXXXXXXXXXX/bcc/com/get');
         const userData = getuser.data.map(item => ({
           ...item,
           user_id : item.user_id || '',
@@ -359,7 +359,7 @@ export default function ManageCom () {
       try{
         setloading(true);
         //await axios.put(``);
-        await axios.post(`http://192.168.10.114:88/bcc/com/repair/log`, LogSoftware);
+        await axios.post(`http://XXXXXXXXXXXXXXXX`, LogSoftware);
         setModalLog(false);
         setloading(false);
         message.success('Processing complete!');
@@ -372,9 +372,9 @@ export default function ManageCom () {
     if(type === 'Hardware' && hardware === 'Moniter'){
       try{
         setloading(true);
-        await axios.put(`http://192.168.10.114:88/bcc/com/update/moniter/${case_service}`, updateMoniter);
+        await axios.put(`http://XXXXXXXXXXXXXXXX/${case_service}`, updateMoniter);
         //console.log('updateKeyboard:', JSON.stringify(updateMoniter, null, 2));
-        await axios.post(`http://192.168.10.114:88/bcc/com/repair/log`, LogHardware_moniter);
+        await axios.post(`http://XXXXXXXXXXXXXXXX`, LogHardware_moniter);
         setModalLog(false);
         setloading(false);
         message.success('Processing complete!');
@@ -387,9 +387,9 @@ export default function ManageCom () {
     if(type === 'Hardware' && hardware === 'Keyboard'){
       try{
         setloading(true);
-        await axios.put(`http://192.168.10.114:88/bcc/com/update/keyboard/${case_service}`, updateKeyboard);
+        await axios.put(`http://XXXXXXXXXXXXXXXX/${case_service}`, updateKeyboard);
         //console.log('updateKeyboard:', JSON.stringify(updateKeyboard, null, 2));
-        await axios.post(`http://192.168.10.114:88/bcc/com/repair/log`, LogHardware_keyboard);
+        await axios.post(`http://XXXXXXXXXXXXXXXX`, LogHardware_keyboard);
         setModalLog(false);
         setloading(false);
         message.success('Processing complete!');
@@ -402,9 +402,9 @@ export default function ManageCom () {
     if(type === 'Hardware' && hardware === 'Mouse'){
       try{
         setloading(true);
-        await axios.put(`http://192.168.10.114:88/bcc/com/update/mouse/${case_service}`, updateMouse);
+        await axios.put(`http://XXXXXXXXXXXXXXXX/${case_service}`, updateMouse);
         //console.log('updateMouse:', JSON.stringify(updateMouse, null, 2));
-        await axios.post(`http://192.168.10.114:88/bcc/com/repair/log`, LogHardware_mouse);
+        await axios.post(`http://XXXXXXXXXXXXXXXX`, LogHardware_mouse);
         setModalLog(false);
         setloading(false);
         message.success('Processing complete!');
@@ -428,7 +428,7 @@ export default function ManageCom () {
     }
     try{
       setloading(true);
-      await axios.put(`http://192.168.10.114:88/cyf/com/remove/${record.case_service}`, Data);
+      await axios.put(`http://XXXXXXXXXXXXXXXX/${record.case_service}`, Data);
 
       getData();
 
